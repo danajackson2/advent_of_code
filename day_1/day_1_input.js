@@ -1,4 +1,4 @@
-const input = [
+export const INPUT = [
   "sixsrvldfour4seven",
   "53hvhgchljnlxqjsgrhxgf1zfoureightmlhvvv",
   "fives2dznl",
