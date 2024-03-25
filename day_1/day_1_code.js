@@ -1,7 +1,7 @@
 import { INPUT } from "./day_1_input.js";
 
-function get_answer() {
-  const nums = INPUT.map((str) => {
+export function decodeInput(input) {
+  const nums = input.map((str) => {
     const arr = str.match(/\d+/g).join("").split("");
     const length = arr.length;
 
@@ -15,5 +15,4 @@ function get_answer() {
   return nums.reduce((a, b) => a + b, 0);
 }
 
-console.log(get_answer());
-// answer: 54561
+console.log(decodeInput(INPUT)); // 54561
