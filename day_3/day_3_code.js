@@ -32,6 +32,14 @@ function isValid(indices, inputIndex) {
   return valid;
 }
 
+export function clearString(str, indices) {
+  const arr = str.split("");
+  indices.forEach((idx) => {
+    arr[idx] = ".";
+  });
+  return arr.join("");
+}
+
 function getAnswer() {
   let sum = 0;
 
@@ -66,12 +74,7 @@ function getAnswer() {
         sum += Number(num);
       }
 
-      // replaces num with . to handle duplicates
-      const arr = str.split("");
-      digitIndices.forEach((idx) => {
-        arr[idx] = ".";
-      });
-      str = arr.join("");
+      str = clearString(str, digitIndices);
     });
   });
 
