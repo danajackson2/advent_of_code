@@ -1,7 +1,7 @@
 import { SEEDS } from "./day_5_input.js";
 import { MAPS } from "./day_5_input.js";
 
-function getDestination(input, map) {
+export function getDestination(input, map) {
   const entry = map.find(
     (entry) => input >= entry[1] && input < entry[1] + entry[2]
   );
@@ -10,7 +10,7 @@ function getDestination(input, map) {
 }
 
 function getAnswer() {
-  let destinations = [];
+  let result = Infinity;
 
   SEEDS.forEach((seed) => {
     let currentResult = seed;
@@ -19,10 +19,10 @@ function getAnswer() {
       currentResult = getDestination(currentResult, map);
     });
 
-    destinations.push(currentResult);
+    if (currentResult < result) result = currentResult;
   });
 
-  return Math.min(...destinations);
+  return result;
 }
 
-console.log(getAnswer()); // 177942185
+// console.log(getAnswer()); // 177942185
