@@ -14,6 +14,22 @@ export const CARD_VALUE = {
   A: 13,
 };
 
+export const CARD_VALUE_J = {
+  J: 1,
+  2: 2,
+  3: 3,
+  4: 4,
+  5: 5,
+  6: 6,
+  7: 7,
+  8: 8,
+  9: 9,
+  T: 10,
+  Q: 11,
+  K: 12,
+  A: 13,
+};
+
 export const INPUT = [
   ["239A8", 171],
   ["8J456", 629],
